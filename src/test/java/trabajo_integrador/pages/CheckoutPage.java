@@ -45,11 +45,11 @@ public class CheckoutPage {
         WebElement clickInCart = driver.findElement(By.xpath("//a[@class='action showcart']"));
         clickInCart.click();
 //espera a que aparezca el cartel desplegable
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement proceedCheckout = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='action showcart']")));
+        proceedCheckout.click();
 
         WebElement proceedCheckout2 = driver.findElement(By.xpath("//button[@id='top-cart-btn-checkout']"));
-        proceedCheckout.click();
         proceedCheckout2.click();
 
 

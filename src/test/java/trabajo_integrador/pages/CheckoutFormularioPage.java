@@ -17,18 +17,15 @@ public class CheckoutFormularioPage {
     }
 
   public void completarFormularioDeEnvio() {
-      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
       // Ingresa el correo electrónico
       WebElement email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='control _with-tooltip']//input[@id='customer-email']")));
-      email.sendKeys("david@gmail.com");
-
-      // Ingresa la contraseña
-      WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='customer-password']")));
-      password.sendKeys("davidmover");
+      email.sendKeys("david@hh.com");
 
       // Ingresa el nombre
-      WebElement nombre = wait.until(ExpectedConditions.elementToBeClickable(By.id("XC1G8YQ")));
+      WebElement nombre = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("KCHQYEX")));
+      nombre.click();
       nombre.sendKeys("David");
 
       // Ingresa el apellido
